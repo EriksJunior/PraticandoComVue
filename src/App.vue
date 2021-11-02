@@ -7,7 +7,6 @@
     <div class="container">
       <FormCliente />
     </div>
-    <router-view></router-view>
   </div>
 </template>
 
