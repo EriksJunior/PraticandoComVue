@@ -20,6 +20,7 @@
           <b-form-input
             id="input-live"
             size="sm"
+            v-model="dadosCliente.nome"
             aria-describedby="input-live-help input-live-feedback"
             trim
             max="50"
@@ -32,6 +33,7 @@
           <b-form-input
             id="input-live"
             size="sm"
+            v-model="dadosCliente.cpfcnpj"
             aria-describedby="input-live-help input-live-feedback"
             trim
             max="50"
@@ -44,6 +46,7 @@
           <b-form-input
             id="input-live"
             size="sm"
+            v-model="dadosCliente.endereco"
             aria-describedby="input-live-help input-live-feedback"
             trim
             max="50"
@@ -56,6 +59,7 @@
           <b-form-input
             id="input-live"
             size="sm"
+            v-model="dadosCliente.bairro"
             aria-describedby="input-live-help input-live-feedback"
             trim
             max="50"
@@ -68,7 +72,7 @@
           <b-form-input
             id="input-live"
             size="sm"
-            aria-describedby="input-live-help input-live-feedback"
+            v-model="dadosCliente.numero"
             trim
             max="50"
           ></b-form-input>
@@ -80,6 +84,7 @@
           <b-form-input
             id="input-live"
             size="sm"
+            v-model="dadosCliente.cidade"
             aria-describedby="input-live-help input-live-feedback"
             trim
             max="50"
@@ -92,6 +97,7 @@
           <b-form-input
             id="input-live"
             size="sm"
+            v-model="dadosCliente.uf"
             aria-describedby="input-live-help input-live-feedback"
             trim
             max="50"
@@ -107,6 +113,7 @@
             id="input-live"
             size="sm"
             type="date"
+            v-model="dadosCliente.dataNasc"
             aria-describedby="input-live-help input-live-feedback"
             trim
             max="50"
@@ -114,7 +121,7 @@
         </div>
       </form>
       <div id="btnsCliente">
-        <b-button variant="success">Salvar</b-button>
+        <b-button variant="success" @click="salvar">Salvar</b-button>
         <b-button variant="danger" class="ml-5">Deletar</b-button>
       </div>
     </div>
@@ -124,6 +131,25 @@
 <script>
 export default {
   name: "formCliente",
+  data() {
+    return {
+      dadosCliente: {
+        nome: "",
+        cpfcnpj: "",
+        endereco: "",
+        bairro: "",
+        numero: "",
+        cidade: "",
+        uf: "",
+        dataNasc: "",
+      },
+    };
+  },
+  methods: {
+    salvar() {
+      console.log(this.dadosCliente);
+    },
+  },
 };
 </script>
 
