@@ -1,9 +1,16 @@
 <template>
-  <di> Cliente Aqui </di>
+  <div>
+    <FormCliente />
+  </div>
 </template>
 
 <script>
-export default {};
+import FormCliente from "../components/FormCliente/formCliente.vue";
+export default {
+  components: {
+    FormCliente,
+  },
+};
 </script>
 
 <style>

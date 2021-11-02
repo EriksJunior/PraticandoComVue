@@ -4,21 +4,17 @@
       <Navigation />
     </div>
 
-    <div class="container">
-      <FormCliente />
-    </div>
+    <router-view />
   </div>
 </template>
 
 <script>
 import Navigation from "@/components/nav/nav.vue";
-import FormCliente from "@/components/FormCliente/formCliente.vue";
 
 export default {
   name: "App",
   components: {
     Navigation,
-    FormCliente,
   },
 };
 </script>

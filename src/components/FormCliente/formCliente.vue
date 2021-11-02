@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="containerGeral">
     <div>
       <h3
         id="titleCliente"
@@ -132,7 +132,7 @@ export default {
   padding: 30px;
   margin-top: 10px;
   border-radius: 50px;
-  width: 98.5%;
+  width: 90%;
   background-color: rgba(1, 9, 77, 0.288);
 }
 
@@ -143,5 +143,10 @@ export default {
 
 #titleCliente {
   margin-top: 10px;
+}
+
+#containerGeral #containerFormCli {
+  float: right;
+  margin-right: 55px;
 }
 </style>
